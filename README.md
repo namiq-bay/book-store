@@ -1,4 +1,4 @@
-#book-store
+# book-store
 
 ## How to use
 ### Pre-requests
@@ -20,15 +20,15 @@ mvn spring-boot:run
 ```bash
 mvn test
 ```
-###Default Users
+### Default Users
 
 |username|password|
 |------|------|
 |publisher|qfrxxxadygrlwtfz|
 |user|iyrgyamflafupzkn|
-##Request URLs and Examples
+## Request URLs and Examples
 * All requests contains HTTP Basic Auth.
-###Details of a book by ID
+### Details of a book by ID
 * GET - http://localhost:8081/books/bc633c81-4f03-4dae-9c33-3935a1226f52
 
 ```json
@@ -40,7 +40,7 @@ mvn test
 }
 ```
 
-###List all books
+### List all books
 * GET - http://localhost:8081/books/all
 
 ```json
@@ -103,7 +103,7 @@ mvn test
     }
 ]
 ```
-###Search specific books (pagination support)
+### Search specific books (pagination support)
 * GET - http://localhost:8081/books?bookName=Java&pageNo=0&pageSize=1
 
 ```json
@@ -143,10 +143,10 @@ mvn test
     "empty": false
 }
 ```
-###Add a new book (Publisher specific)
+### Add a new book (Publisher specific)
 * POST - http://localhost:8081/books/create
 
-####Request Body
+#### Request Body
 ```json
 {
     "bookName" : "Algorithms",
@@ -155,16 +155,16 @@ mvn test
 ```
 > This request returns the 201 HTTP Created status code and the URI of the added book as the location in the Header.
 
-###Update existing book by ID (Publisher specific)
+### Update existing book by ID (Publisher specific)
 * PUT - http://localhost:8081/books/update/65a8f5ec-a2f3-40f4-88af-f0ecc1c937ea
-####Request Body
+#### Request Body
 ```json
 {
     "bookName" : "Introduction to Algorithms",
     "author": "Thomas H. Cormen"
 }
 ```
-####Response body
+#### Response body
 ```json
 {
     "id": "65a8f5ec-a2f3-40f4-88af-f0ecc1c937ea",
@@ -174,6 +174,6 @@ mvn test
 }
 ```
 
-###Delete existing book by ID (Publisher specific)
+### Delete existing book by ID (Publisher specific)
 * DELETE - http://localhost:8081/books/delete/65a8f5ec-a2f3-40f4-88af-f0ecc1c937ea
   > This request returns the 202 HTTP Accepted status code.
