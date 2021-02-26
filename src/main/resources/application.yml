@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+# Database
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/book_store_db
+    username: root
+    password: rxqfifwqtzmrjmzy
+    data:
+      - classpath:data.sql
+    schema:
+      - classpath:schema.sql
+    initialization-mode: always
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+  batch:
+    initialize-schema: always
+
