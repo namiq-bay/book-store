@@ -20,14 +20,15 @@ mvn spring-boot:run
 ```bash
 mvn test
 ```
+
+## Request URLs and Examples
+* All requests contains HTTP Basic Auth.
 ### Default Users
 
 |username|password|
 |------|------|
 |publisher|qfrxxxadygrlwtfz|
 |user|iyrgyamflafupzkn|
-## Request URLs and Examples
-* All requests contains HTTP Basic Auth.
 ### Details of a book by ID
 * GET - http://localhost:8081/books/bc633c81-4f03-4dae-9c33-3935a1226f52
 
